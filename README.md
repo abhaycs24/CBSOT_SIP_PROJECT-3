@@ -50,7 +50,38 @@ KEY FEATURES
 - Scalable Retrieval: Leverages FAISS for sub-millisecond document matching across 15,000+ papers.
 - Agentic Intelligence: Dynamically switches between retrieval, summarization, and keyword extraction.
 - Context-Rich Synthesis: Moves beyond simple search to provide actionable insights and comparisons.
-- Extensible Design: Modular tool architecture allows for easy integration of new capabilities.
+- Extensible Design: Modular tool architecture allows for easy integration of new capabilities. 
+--------------------------------------------------
+
+- ## 🛠 Installation
+
+1. Prerequisites: Ensure you have Python 3.10+ installed (compatible with Python 3.14.0)[cite: 2].
+
+2. Install Dependencies:
+   pip install -r requirements.txt
+   python -m spacy download en_core_web_sm
+
+3. Configure API Key: Create a .env file in the root directory and add your Google Gemini API key:
+   GEMINI_API_KEY=your_gemini_api_key_here
+
+4. Build the Search Index: Run the initialization scripts to download the ArXiv dataset (capped at 1,000 papers for fast development, adjustable in src/data_prep.py), generate embeddings, and build the FAISS vector index[cite: 2].
+   python src/data_prep.py
+   python src/build_index.py
 
 --------------------------------------------------
 
+## 🚀 Usage
+
+Launch the interactive Streamlit application:
+   streamlit run src/app.py
+
+Open your browser to http://localhost:8501. Enter a query, run the search, and view the live execution of the agents.
+
+--------------------------------------------------
+
+## 🔮 Future Scope
+
+- Citation Graph Integration: Track reference connections to trace how ideas propagate between papers.
+- Support for Full-Text PDFs: Expand analysis from abstracts to full paper PDFs for deeper insights.
+- Hierarchical Vector Search: Implement hierarchical indexes (e.g., HNSW) to scale performance to millions of papers.
+- Multi-Modal Analysis: Enable agents to read tables, charts, and figures inside papers.
