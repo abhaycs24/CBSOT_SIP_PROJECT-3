@@ -32,7 +32,7 @@ The assistant operates as a modular agentic system:
 
 --------------------------------------------------
 
-HOW TO RUN
+## **HOW TO RUN**
 
 1. Environment Setup: Ensure you have a GROQ_API_KEY configured in your environment or Colab Secrets.
 
@@ -45,7 +45,7 @@ HOW TO RUN
 
 --------------------------------------------------
 
-KEY FEATURES
+## **KEY FEATURES**
 
 - Scalable Retrieval: Leverages FAISS for sub-millisecond document matching across 15,000+ papers.
 - Agentic Intelligence: Dynamically switches between retrieval, summarization, and keyword extraction.
