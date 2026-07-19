@@ -30,5 +30,27 @@ The assistant operates as a modular agentic system:
     *   `extract_keywords`: Uses KeyBERT to highlight core research themes.
     *   `compare_papers`: Evaluates and contrasts two different research contributions.
 
----
+--------------------------------------------------
+
+HOW TO RUN
+
+1. Environment Setup: Ensure you have a GROQ_API_KEY configured in your environment or Colab Secrets.
+
+2. Install Dependencies: Run the following command in your terminal:
+   pip install langchain langchain-openai langchain-community faiss-cpu sentence-transformers keybert transformers
+
+3. Execution: Run the notebook cells sequentially to ingest the dataset and initialize the vector store.
+
+4. Interact: Use the provided terminal interface to begin querying your research database.
+
+--------------------------------------------------
+
+KEY FEATURES
+
+- Scalable Retrieval: Leverages FAISS for sub-millisecond document matching across 15,000+ papers.
+- Agentic Intelligence: Dynamically switches between retrieval, summarization, and keyword extraction.
+- Context-Rich Synthesis: Moves beyond simple search to provide actionable insights and comparisons.
+- Extensible Design: Modular tool architecture allows for easy integration of new capabilities.
+
+--------------------------------------------------
 
