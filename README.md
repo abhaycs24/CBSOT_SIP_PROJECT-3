@@ -34,7 +34,6 @@ The assistant operates as a modular agentic system:
 
 ## 📊 Workflow Diagram
 
-```mermaid
 graph TD
     A[User Query] --> B[Agent (Llama-3.1)]
     B --> C{Tool Selection}
